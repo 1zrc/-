@@ -1,0 +1,38 @@
+C51 COMPILER V9.54   MAIN                                                                  01/15/2023 19:57:58 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          void main()
+   3          {
+   4   1        P2_4=0;//控制选位，编译器数加1就是灯数（灯从右到左数),这里是第4+1盏灯
+   5   1        P2_3=0;//与LED共用io口，可能LED会乱闪，可以试试调跳线帽
+   6   1        P2_2=1;
+   7   1        P0=0x07;//控制段码，最上面一横是a然后顺时针排，中间一横是g，小数点是最后为dp
+   8   1        //所以是b和小数点dp不亮，因为单片机共阴极，所以是1011 1110，又因为经过缓存区后
+   9   1        //会颠倒，所以要变成0111 1101即16进制的0x7D
+  10   1        while(1)
+  11   1        {
+  12   2          
+  13   2        }
+  14   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     11    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
