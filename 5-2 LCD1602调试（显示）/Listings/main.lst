@@ -1,0 +1,42 @@
+C51 COMPILER V9.54   MAIN                                                                  01/16/2023 19:04:39 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "LCD1602.H"
+   3          //从别的地方拿到代码要先点左上方打开项目文件，然后把代码文件复制到里面！！！
+   4          //然后点group1，打开all添加文件,不然右键include是无法查看的
+   5          void main()
+   6          {
+   7   1        LCD_Init();//初始化
+   8   1        LCD_ShowChar(1,1,'A');//行，列，内容
+   9   1        LCD_ShowString(1,3,"hello");
+  10   1        LCD_ShowNum(1,9,123,3);//最后一个是显示长度，2是23，4是0123
+  11   1        LCD_ShowSignedNum(1,13,-66,2);
+  12   1        LCD_ShowHexNum(2,1,0xA8,2);//两位十六进制数
+  13   1        LCD_ShowBinNum(2,4,0xAA,8);//二进制但是十六进制表示
+  14   1        while(1)
+  15   1        {
+  16   2          
+  17   2        }
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     83    ----
+   CONSTANT SIZE    =      6    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
